@@ -9,16 +9,16 @@ export const Todo = () => {
   const [inputText, setInputText] = useState("");
   const [showForm, setShowForm] = useState(false);
 
-  useEffect(() => {
-    const storageTaskList = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-    if (storageTaskList) {
-      setTaskList(storageTaskList);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storageTaskList = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+  //   if (storageTaskList) {
+  //     setTaskList(storageTaskList);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(taskList));
-  }, [taskList]);
+  // useEffect(() => {
+  //   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(taskList));
+  // }, [taskList]);
 
   useEffect(() => {
     if (taskList.length === 0) {
